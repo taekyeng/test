@@ -1,8 +1,8 @@
 name: Test workflow
-on: workflow dispatch
+on: workflow_dispatch
 env:
 	OUTPUT_FILE: output.log
- 	OUTPUT_NAME: output-log-file
+	OUTPUT_NAME: output-log-file
 jobs:
 	upload-job:
 		name: Save output
