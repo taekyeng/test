@@ -19,4 +19,4 @@ jobs:
       output1: ${{ steps.step1.outputs.result }}
     steps:
     - id: step1    # input1에 10을 더해서 output result에 기록
-      run: echo "result=`expr ${{ inputs.input1 }} + ${{ inputs.input2 }}`" >> $GITHUB_OUTPUT
+      run: echo "result=${{ inputs.input1 }} ${{ inputs.input2 }}" >> $GITHUB_OUTPUT
