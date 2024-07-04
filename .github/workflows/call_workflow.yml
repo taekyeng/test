@@ -3,7 +3,7 @@ on:
   workflow_dispatch
 jobs:
   job1:
-    uses: jyheo/test3/.github/workflows/reusable-workflow.yml@main
+    uses: taekyeng/test/.github/workflows/reusable-workflow.yml@main
     with:
       input1: "Hello, "  # 입력 input1 을 10으로 하여 reusable-workflow 실행
       input2: "World!"
