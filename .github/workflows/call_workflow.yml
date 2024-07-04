@@ -5,8 +5,8 @@ jobs:
   job1:
     uses: taekyeng/test/.github/workflows/reusable_workflow.yml@main
     with:
-      input1: "Hello, "  # 입력 input1 을 10으로 하여 reusable-workflow 실행
-      input2: "World!"
+      input1: 20  # 입력 input1 을 10으로 하여 reusable-workflow 실행
+      input2: 10
 
   job2:
     runs-on: ubuntu-latest
