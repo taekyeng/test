@@ -1,0 +1,15 @@
+name: Call a reusable workflow and use its outputs
+on:
+  workflow_dispatch
+jobs:
+  job1:
+    uses: jyheo/test3/.github/workflows/reusable-workflow.yml@main
+    with:
+      input1: "Hello, "  # 입력 input1 을 10으로 하여 reusable-workflow 실행
+      input2: "World!"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1   # job1이 끝난 후에 수행
+    steps:
+      - run: echo ${{ needs.job1.outputs.output1 }}  # needs 를 통해 output 접근
